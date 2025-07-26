@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cookie Test</title>
+</head>
+<body>
+
+	<button type="button" value="setCookie" onclick="setCookie()">set cookie</button>
+	<button type="button" value="getCookie" onclick="getCookie()">get cookie</button>
+
+	<script type="text/javascript">
+		function setCookie()
+		{
+			document.cookie = "username=araman";
+		}
+
+		function getCookie()
+		{
+			if(document.cookie.length !=0)
+			{
+				var arr = document.cookie.split("=");
+				alert("Name="+arr[0]+" "+"Value="+arr[1]);
+			}
+
+			else
+			{
+				alert("Cookie not available");
+			}
+		}
+	</script>
+
+</body>
+</html>
